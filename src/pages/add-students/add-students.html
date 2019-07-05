@@ -1,0 +1,42 @@
+
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <!-- <ion-buttons start>
+        <button ion-button icon-only (click)="dismiss()">
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-buttons> -->
+
+    <ion-title style="text-align: center">Add Employee </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label stacked> Name</ion-label>
+    <ion-input type="text" [(ngModel)]="employee.name"></ion-input>
+  </ion-item>
+  <ion-item>
+
+    <ion-label stacked> Email</ion-label>
+    <ion-input type="email" pattern="[^ @]*@[^ @]*" [email]="true" [(ngModel)]="employee.email" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked> Cell no</ion-label>
+    <ion-input type="tel" [(ngModel)]="employee.cellno" maxLength="10"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked> Occupation</ion-label>
+    <ion-input type="text" [(ngModel)]="employee.occupation"></ion-input>
+  </ion-item>
+
+
+  <button ion-button class="btn-add" (click)="createEmployee()">Add Employee</button>
+
+
+
+</ion-content>

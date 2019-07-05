@@ -1,0 +1,39 @@
+
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <!-- <ion-buttons start>
+        <button ion-button icon-only (click)="dismiss()">
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-buttons> -->
+
+    <ion-title style="text-align: center">Update </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+<div  *ngIf="employees">
+ <ion-item>
+    <ion-label floating>Employee name</ion-label>
+   <ion-input [(ngModel)]="employees.name"></ion-input>
+</ion-item>
+<ion-item>
+    <ion-label floating>Email</ion-label>
+    <ion-input [(ngModel)]="employees.email"></ion-input>
+</ion-item>
+<ion-item>
+    <ion-label floating>Contact phone</ion-label>
+    <ion-input [(ngModel)]="employees.cellno"></ion-input>
+</ion-item>
+<ion-item>
+    <ion-label floating>Occupation</ion-label>
+    <ion-input [(ngModel)]="employees.occupation"></ion-input>
+</ion-item>
+
+</div>
+  <button ion-button class="btn-add" style="background-color: rgb(51, 21, 78)" (click)="update()">Edit employees</button>
+
+</ion-content>
