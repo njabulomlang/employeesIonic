@@ -15,6 +15,7 @@ export interface Emp {
   name: string,
   email: string,
   cellno: string,
+  pic: any,
   occupation: string
 
 }
@@ -62,8 +63,8 @@ export class DatabaseProvider {
     return this.db.executeSql('INSERT INTO employee (name, email, pic, cellno, occupation) VALUES (?,?,?,?,?)', [name, email, pic, cellno, occupation]);
   }
 updateemployee(emp: Emp){
-  let data = [emp.name,emp.email,emp.cellno,emp.occupation];
- return this.db.executeSql(`UPDATE employee SET name = ?, email = ?, cellno = ?, occupation = ? WHERE id = ${emp.id}`, data).then((data) =>{
+  let data = [emp.name,emp.email,emp.cellno, emp.pic,emp.occupation];
+ return this.db.executeSql(`UPDATE employee SET name = ?, email = ?, cellno = ?,pic=?, occupation = ? WHERE id = ${emp.id}`, data).then((data) =>{
    this.loadEmployees();
  })
 }
@@ -80,6 +81,7 @@ loadEmployees() {
           name: data.rows.item(i).name,
           email: data.rows.item(i).email,
           cellno: data.rows.item(i).cellno,
+          pic: data.rows.item(i).pic,
           occupation: data.rows.item(i).occupation
          });
       }

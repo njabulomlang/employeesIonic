@@ -1,3 +1,4 @@
+import { ViewPage } from './../view/view';
 import { Component } from '@angular/core';
 import { NavController, ModalController, ToastController, ViewController, AlertController } from 'ionic-angular';
 import { DatabaseProvider } from '../../providers/database/database';
@@ -128,4 +129,8 @@ export class HomePage {
   //   this.search ="";
   //   this.loadStudents();
   // }
+  view(id){
+  this.navCtrl.push(ViewPage, id);
+}
+
 }

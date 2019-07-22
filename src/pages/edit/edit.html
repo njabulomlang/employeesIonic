@@ -32,8 +32,16 @@
     <ion-label floating>Occupation</ion-label>
     <ion-input [(ngModel)]="employees.occupation"></ion-input>
 </ion-item>
+<ion-item>
+    <button ion-button (click)="upload()">change pic</button>
+</ion-item>
+
+
 
 </div>
-  <button ion-button class="btn-add" style="background-color: rgb(51, 21, 78)" (click)="update()">Edit employees</button>
+
 
 </ion-content>
+<ion-footer class="footer">
+<button ion-button class="btn-add" style="background-color: rgb(51, 21, 78)" (click)="update()">Edit employees</button>
+  </ion-footer>

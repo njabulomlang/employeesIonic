@@ -1,25 +1,27 @@
 <ion-header>
-  <ion-navbar color="secondary">
+  <ion-navbar >
     <ion-title  >
-      Employees
+      <p style="color: white">Employees</p>
     </ion-title>
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content >
     <ion-list >
-        <ion-item *ngFor="let student of students">
-          <h2> {{ student.name }}</h2>
-          <p>{{student.email}}</p>
-          <p>{{student.cellno}}</p>
-          <p>{{student.occupation}}</p>
-          <button   (click)="editStudent(student.id)" ion-button clear item-end><ion-icon name="create"></ion-icon></button>
-
+        <ion-item  *ngFor="let student of students">
+<div class="container">
+          <img src="{{student.pic}}" alt="" width="50" height="50" style="border-radius: 50%; border: navy solid 2px; ">
+          <div> <h2> {{ student.name }}</h2>
+          <p>{{student.email}}</p></div>
+</div>
+<div class="btn">  <button (click)="view(student.id)" ion-button clear item-end>View</button>
+          <button   (click)="editStudent(student.id)" ion-button clear item-end>edit</button>
             <button ion-button clear (click)="delete(student.id)" item-end>
-              <ion-icon name="trash"></ion-icon>
+             delete
 
           </button>
-        </ion-item>
+       </div>
+  </ion-item>
       </ion-list>
   <!-- <ion-list>
     <ion-item *ngFor="let student of students">
@@ -30,12 +32,7 @@
   </ion-list> -->
 
   <ion-fab bottom right>
-    <button ion-fab >
-      <ion-icon name='apps'></ion-icon>
-    </button>
-    <ion-fab-list side="top">
       <button (click)="addStudents()" ion-fab><ion-icon  name="add"></ion-icon></button>
-    </ion-fab-list>
   </ion-fab>
 
 </ion-content>

@@ -1,14 +1,14 @@
 
 <ion-header>
 
-  <ion-navbar color="secondary">
+  <ion-navbar color="primary">
     <!-- <ion-buttons start>
         <button ion-button icon-only (click)="dismiss()">
           <ion-icon name="search"></ion-icon>
         </button>
       </ion-buttons> -->
 
-    <ion-title style="text-align: center">Add Employee </ion-title>
+    <ion-title style="text-align: center;"> <p style="color: white">Add Employees</p> </ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -34,9 +34,16 @@
     <ion-input type="text" [(ngModel)]="employee.occupation"></ion-input>
   </ion-item>
 
+  <ion-item>
+   <img src="{{employee.pic}}" width="50" height="50"> <button ion-button class="btn-add" style="width: 20%" (click)="upload()">Upload</button>
+  </ion-item>
 
-  <button ion-button class="btn-add" (click)="createEmployee()">Add Employee</button>
+
+
 
 
 
 </ion-content>
+<ion-footer class="footer">
+ <button ion-button class="btn-add" (click)="createEmployee()">Add Employee</button>
+  </ion-footer>

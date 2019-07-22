@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.njabulo.employees" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Employees</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework.com" href="http://ionicframework.com/">Ionic Framework Team</author>
@@ -90,4 +90,6 @@
     <allow-navigation href="http://192.168.1.114:8100" />
     <allow-navigation href="http://192.168.1.114:8101" />
     <allow-navigation href="http://192.168.1.28:8101" />
+    <allow-navigation href="http://192.168.1.21:8100" />
+    <allow-navigation href="http://192.168.1.24:8100" />
 </widget>
